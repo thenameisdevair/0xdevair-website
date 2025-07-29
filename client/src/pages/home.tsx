@@ -5,7 +5,6 @@ import { FloatingCherryBlossoms } from "@/components/ui/floating-cherry-blossoms
 import { 
   Github, 
   Twitter, 
-  ExternalLink, 
   Mail, 
   TrendingUp, 
   Users, 
@@ -247,9 +246,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Irys SDK</span>
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">NFTs</span>
                 </div>
-                <Button variant="link" className="text-cherry-pink hover:text-cherry-pink/80 font-medium p-0">
-                  View Project <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
+
               </CardContent>
             </Card>
 
@@ -264,9 +261,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Superseed</span>
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Identity</span>
                 </div>
-                <Button variant="link" className="text-accent-blue hover:text-accent-blue/80 font-medium p-0">
-                  View Project <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
+
               </CardContent>
             </Card>
 
@@ -281,9 +276,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Telegram API</span>
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Analytics</span>
                 </div>
-                <Button variant="link" className="text-green-400 hover:text-green-400/80 font-medium p-0">
-                  View Project <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
+
               </CardContent>
             </Card>
 
@@ -298,11 +291,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Dune Analytics</span>
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">DeFi</span>
                 </div>
-                <Button variant="link" asChild className="text-purple-400 hover:text-purple-400/80 font-medium p-0">
-                  <a href="https://dune.com/devair_md" target="_blank" rel="noopener noreferrer">
-                    View Dashboards <ExternalLink className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
+
               </CardContent>
             </Card>
 
@@ -317,9 +306,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Python</span>
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Web3.py</span>
                 </div>
-                <Button variant="link" className="text-yellow-400 hover:text-yellow-400/80 font-medium p-0">
-                  View Project <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
+
               </CardContent>
             </Card>
 
@@ -334,11 +321,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Medium</span>
                   <span className="px-3 py-1 bg-dark-primary rounded-full text-xs">Research</span>
                 </div>
-                <Button variant="link" asChild className="text-cherry-pink hover:text-cherry-pink/80 font-medium p-0">
-                  <a href="https://0xdevair.medium.com" target="_blank" rel="noopener noreferrer">
-                    Read Articles <ExternalLink className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
+
               </CardContent>
             </Card>
           </div>
