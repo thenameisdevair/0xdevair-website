@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FloatingCherryBlossoms } from "@/components/ui/floating-cherry-blossoms";
 import { 
-  Github, 
   Twitter, 
   Mail, 
   TrendingUp, 
@@ -20,7 +19,8 @@ import {
   IdCard,
   Wallet,
   BookOpen,
-  PieChart
+  PieChart,
+  MessageCircle
 } from "lucide-react";
 import brandIllustrationUrl from "@assets/edited deevair high qua_1753804626393.jpg";
 
@@ -352,10 +352,10 @@ export default function Home() {
             <Card className="bg-dark-secondary border-dark-secondary hover:bg-dark-secondary/80 transition-all duration-300 hover:scale-105 group animate-on-scroll" style={{animationDelay: '0.4s'}}>
               <CardContent className="pt-6 text-center">
                 <Button variant="link" asChild className="p-0 h-auto flex flex-col items-center">
-                  <a href="https://github.com/thenameisdevair" target="_blank" rel="noopener noreferrer">
-                    <Github className="w-8 h-8 text-text-primary mb-2 group-hover:scale-110 transition-transform" />
-                    <div className="text-sm text-text-secondary">GitHub</div>
-                    <div className="font-semibold">thenameisdevair</div>
+                  <a href="https://t.me/OxDevair" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-8 h-8 text-green-400 mb-2 group-hover:scale-110 transition-transform" />
+                    <div className="text-sm text-text-secondary">Telegram</div>
+                    <div className="font-semibold">@OxDevair</div>
                   </a>
                 </Button>
               </CardContent>
