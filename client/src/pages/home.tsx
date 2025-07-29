@@ -124,7 +124,7 @@ export default function Home() {
                 <a href="#projects">View Projects</a>
               </Button>
               <Button variant="outline" asChild className="border-cherry-pink text-cherry-pink hover:bg-cherry-pink hover:text-dark-primary px-8 py-3 transition-all duration-300">
-                <a href="https://x.com/messages/220278078-1900549803823788032" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+                <a href="https://x.com/0xdevair" target="_blank" rel="noopener noreferrer">Get in Touch</a>
               </Button>
             </div>
           </div>
