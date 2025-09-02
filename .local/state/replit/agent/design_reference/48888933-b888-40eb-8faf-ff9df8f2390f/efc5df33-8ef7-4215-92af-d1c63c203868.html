@@ -1,0 +1,523 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devair - Web3 Builder & On-Chain Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0A0A0A',
+                        'secondary': '#1A1A1A',
+                        'accent': '#00D4FF',
+                        'accent-purple': '#8B5CF6',
+                        'muted': '#A1A1AA'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'rotate-titles': 'rotateTitles 6s infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'float': 'float 3s ease-in-out infinite'
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes rotateTitles {
+            0%, 33% { opacity: 1; transform: translateY(0); }
+            34%, 66% { opacity: 0; transform: translateY(-20px); }
+            67%, 100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #00D4FF40; }
+            to { box-shadow: 0 0 30px #00D4FF80; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .title-rotation {
+            position: relative;
+            height: 1.5em;
+            overflow: hidden;
+        }
+        
+        .title-rotation span {
+            position: absolute;
+            width: 100%;
+            animation: rotateTitles 6s infinite;
+        }
+        
+        .title-rotation span:nth-child(2) {
+            animation-delay: 2s;
+        }
+        
+        .title-rotation span:nth-child(3) {
+            animation-delay: 4s;
+        }
+        
+        .gradient-border {
+            background: linear-gradient(135deg, #00D4FF, #8B5CF6);
+            padding: 1px;
+            border-radius: 12px;
+        }
+        
+        .gradient-border-content {
+            background: #1A1A1A;
+            border-radius: 11px;
+            height: 100%;
+        }
+        
+        .skill-bar {
+            background: linear-gradient(90deg, #00D4FF, #8B5CF6);
+            height: 8px;
+            border-radius: 4px;
+            transition: width 2s ease-in-out;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    </style>
+</head>
+<body class="bg-primary text-white font-inter">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-primary/90 backdrop-blur-sm z-50 border-b border-secondary">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold text-accent">Devair</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-accent transition-colors">Home</a>
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
+                <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+            </div>
+            <div class="text-muted text-sm">0xdevair</div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Background with blockchain aesthetic -->
+    <div class="absolute inset-0 opacity-10">
+        <!-- A modern digital blockchain network visualization with glowing nodes and connections -->
+        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" alt="Blockchain network visualization" class="w-full h-full object-cover" />
+    </div>
+    
+    <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <div class="mb-8">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 animate-float">
+                <span class="bg-gradient-to-r from-accent to-accent-purple bg-clip-text text-transparent">
+                    Devair
+                </span>
+            </h1>
+            <div class="text-2xl md:text-3xl text-muted mb-6">
+                <div class="title-rotation">
+                    <span>Web3 Builder</span>
+                    <span>On-Chain Analyst</span>
+                    <span>DeFi Researcher</span>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-xl text-muted mb-12 max-w-2xl mx-auto leading-relaxed">
+            Crafting the future of decentralized finance through data-driven insights and innovative blockchain solutions.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <button class="px-8 py-4 bg-accent text-black font-semibold rounded-lg hover:bg-accent/90 transition-all transform hover:scale-105 animate-glow">
+                View Portfolio
+            </button>
+            <button class="px-8 py-4 border border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-black transition-all transform hover:scale-105">
+                Get In Touch
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section-padding bg-secondary">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6 text-accent">About Me</h2>
+                <p class="text-lg text-muted mb-6 leading-relaxed">
+                    As a passionate Web3 Builder and On-Chain Analyst, I specialize in decoding the complexities of blockchain technology and DeFi protocols. My expertise lies in transforming raw blockchain data into actionable insights that drive strategic decisions.
+                </p>
+                <p class="text-lg text-muted mb-8 leading-relaxed">
+                    With a background in data analysis and technical writing, I bridge the gap between complex blockchain technology and clear, understandable insights for both technical and non-technical audiences.
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-cube text-accent text-xl"></i>
+                        <span class="text-lg">Web3 Development & Integration</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-chart-line text-accent text-xl"></i>
+                        <span class="text-lg">On-Chain Data Analysis</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-pen-fancy text-accent text-xl"></i>
+                        <span class="text-lg">Technical Writing & Research</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- A professional workspace setup with multiple monitors displaying financial charts and data -->
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Professional trading workspace" class="rounded-xl shadow-2xl" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="section-padding">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6 text-accent">Portfolio</h2>
+            <p class="text-xl text-muted max-w-3xl mx-auto">
+                Explore my latest projects in DeFi research, blockchain development, and on-chain analysis.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="gradient-border group hover:scale-105 transition-all duration-300">
+                <div class="gradient-border-content p-6">
+                    <!-- A detailed cryptocurrency trading chart with candlesticks and technical indicators -->
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="DeFi trading analysis dashboard" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold mb-3 text-accent">DeFi Yield Optimization Research</h3>
+                    <p class="text-muted mb-4">Comprehensive analysis of yield farming strategies across major DeFi protocols, identifying optimal risk-reward ratios.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/20 text-accent text-sm rounded-full">Research</span>
+                        <span class="px-3 py-1 bg-accent-purple/20 text-accent-purple text-sm rounded-full">DeFi</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="gradient-border group hover:scale-105 transition-all duration-300">
+                <div class="gradient-border-content p-6">
+                    <!-- A complex data visualization showing network analysis with nodes and connections -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Blockchain network analysis visualization" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold mb-3 text-accent">On-Chain Analytics Dashboard</h3>
+                    <p class="text-muted mb-4">Real-time blockchain analytics platform providing insights into transaction patterns and network health.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/20 text-accent text-sm rounded-full">Analytics</span>
+                        <span class="px-3 py-1 bg-accent-purple/20 text-accent-purple text-sm rounded-full">Web3</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="gradient-border group hover:scale-105 transition-all duration-300">
+                <div class="gradient-border-content p-6">
+                    <!-- A futuristic blockchain technology concept with glowing digital elements -->
+                    <img src="https://images.unsplash.com/photo-1639815188546-c43c240ff4df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Smart contract development interface" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Smart Contract Auditing Tool</h3>
+                    <p class="text-muted mb-4">Automated security analysis tool for smart contracts, identifying vulnerabilities and optimization opportunities.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/20 text-accent text-sm rounded-full">Security</span>
+                        <span class="px-3 py-1 bg-accent-purple/20 text-accent-purple text-sm rounded-full">Smart Contracts</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="gradient-border group hover:scale-105 transition-all duration-300">
+                <div class="gradient-border-content p-6">
+                    <!-- A detailed financial data visualization with multiple charts and graphs -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="DeFi protocol analysis charts" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Cross-Chain Bridge Analysis</h3>
+                    <p class="text-muted mb-4">In-depth research on cross-chain bridge security and efficiency across multiple blockchain networks.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/20 text-accent text-sm rounded-full">Cross-Chain</span>
+                        <span class="px-3 py-1 bg-accent-purple/20 text-accent-purple text-sm rounded-full">Security</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="gradient-border group hover:scale-105 transition-all duration-300">
+                <div class="gradient-border-content p-6">
+                    <!-- A professional workspace with blockchain and cryptocurrency research materials -->
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Technical writing workspace for blockchain research" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Technical Writing Portfolio</h3>
+                    <p class="text-muted mb-4">Collection of technical articles and whitepapers on blockchain technology and DeFi protocols.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/20 text-accent text-sm rounded-full">Writing</span>
+                        <span class="px-3 py-1 bg-accent-purple/20 text-accent-purple text-sm rounded-full">Education</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div class="gradient-border group hover:scale-105 transition-all duration-300">
+                <div class="gradient-border-content p-6">
+                    <!-- A modern data center with servers and blockchain infrastructure -->
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Blockchain infrastructure monitoring dashboard" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold mb-3 text-accent">Blockchain Infrastructure Monitor</h3>
+                    <p class="text-muted mb-4">Real-time monitoring system for blockchain node performance and network health metrics.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/20 text-accent text-sm rounded-full">Infrastructure</span>
+                        <span class="px-3 py-1 bg-accent-purple/20 text-accent-purple text-sm rounded-full">Monitoring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section-padding bg-secondary">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6 text-accent">Skills & Expertise</h2>
+            <p class="text-xl text-muted max-w-3xl mx-auto">
+                Technical proficiencies that power my Web3 development and analysis capabilities.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-accent">Technical Skills</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white">Blockchain Development</span>
+                            <span class="text-muted">95%</span>
+                        </div>
+                        <div class="bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white">Data Analysis</span>
+                            <span class="text-muted">90%</span>
+                        </div>
+                        <div class="bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white">Smart Contracts</span>
+                            <span class="text-muted">88%</span>
+                        </div>
+                        <div class="bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white">Technical Writing</span>
+                            <span class="text-muted">92%</span>
+                        </div>
+                        <div class="bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-accent">Technologies</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-primary p-4 rounded-lg text-center hover:bg-accent/10 transition-colors">
+                        <i class="fab fa-ethereum text-3xl text-accent mb-2"></i>
+                        <div class="font-semibold">Ethereum</div>
+                    </div>
+                    <div class="bg-primary p-4 rounded-lg text-center hover:bg-accent/10 transition-colors">
+                        <i class="fas fa-chart-bar text-3xl text-accent mb-2"></i>
+                        <div class="font-semibold">Python</div>
+                    </div>
+                    <div class="bg-primary p-4 rounded-lg text-center hover:bg-accent/10 transition-colors">
+                        <i class="fas fa-code text-3xl text-accent mb-2"></i>
+                        <div class="font-semibold">Solidity</div>
+                    </div>
+                    <div class="bg-primary p-4 rounded-lg text-center hover:bg-accent/10 transition-colors">
+                        <i class="fas fa-database text-3xl text-accent mb-2"></i>
+                        <div class="font-semibold">SQL</div>
+                    </div>
+                    <div class="bg-primary p-4 rounded-lg text-center hover:bg-accent/10 transition-colors">
+                        <i class="fab fa-js-square text-3xl text-accent mb-2"></i>
+                        <div class="font-semibold">JavaScript</div>
+                    </div>
+                    <div class="bg-primary p-4 rounded-lg text-center hover:bg-accent/10 transition-colors">
+                        <i class="fas fa-chart-line text-3xl text-accent mb-2"></i>
+                        <div class="font-semibold">DeFi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section-padding">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6 text-accent">Get In Touch</h2>
+            <p class="text-xl text-muted">
+                Ready to collaborate on your next Web3 project? Let's connect and build the future together.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 text-accent">Let's Connect</h3>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-envelope text-accent"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Email</div>
+                            <div class="text-muted">contact@devair.eth</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                            <i class="fab fa-twitter text-accent"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Twitter</div>
+                            <div class="text-muted">@0xdevair</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                            <i class="fab fa-github text-accent"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">GitHub</div>
+                            <div class="text-muted">github.com/devair</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-wallet text-accent"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Web3 Identity</div>
+                            <div class="text-muted">0xdevair</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gradient-border">
+                <div class="gradient-border-content p-8">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2" for="name">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-primary border border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent" data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2" for="email">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-primary border border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent" data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2" for="message">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-primary border border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent" data-mock="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-accent text-black font-semibold rounded-lg hover:bg-accent/90 transition-all transform hover:scale-105" data-event="click:handleSubmit" data-implementation="Should validate form before submission">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-secondary py-8 border-t border-gray-700">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-bold text-accent mb-4 md:mb-0">Devair</div>
+            <div class="text-muted text-center md:text-left">
+                © 2024 Devair (0xdevair). Building the future of Web3.
+            </div>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="text-muted hover:text-accent transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-muted hover:text-accent transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="text-muted hover:text-accent transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // TODO: Implement smooth scrolling navigation
+    // TODO: Add form validation and submission logic
+    // TODO: Implement intersection observer for animations
+    // TODO: Add loading states for portfolio items
+    
+    (function() {
+        // Simple scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe portfolio cards for animation
+        document.querySelectorAll('.gradient-border').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+        
+        // Mobile menu toggle (if needed)
+        // TODO: Implement mobile navigation menu
+    })();
+</script>
+
+</body>
+</html>

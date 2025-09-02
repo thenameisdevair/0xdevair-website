@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devair (0xdevair) - Web3 Analytics & DeFi Research Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        golden: {
+                            100: '#FEF3C7',
+                            300: '#FCD34D', 
+                            500: '#F59E0B',
+                            600: '#D97706',
+                            700: '#B45309'
+                        },
+                        pink: {
+                            100: '#FCE7F3',
+                            300: '#F8BBD9',
+                            500: '#EC4899',
+                            600: '#DB2777'
+                        },
+                        cream: {
+                            50: '#FEFCF9',
+                            100: '#FAF7F2',
+                            200: '#F5F5DC'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-cream-100 text-gray-800 font-sans">
+    
+    <!-- Navigation -->
+    <nav class="bg-cream-50 shadow-sm border-b border-golden-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-golden-600">0xdevair</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-gray-700 hover:text-golden-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="text-gray-700 hover:text-golden-600 px-3 py-2 text-sm font-medium transition-colors">Skills</a>
+                        <a href="#portfolio" class="text-gray-700 hover:text-golden-600 px-3 py-2 text-sm font-medium transition-colors">Portfolio</a>
+                        <a href="#research" class="text-gray-700 hover:text-golden-600 px-3 py-2 text-sm font-medium transition-colors">Research</a>
+                        <a href="#contact" class="bg-golden-500 hover:bg-golden-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-golden-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-cream-50 to-cream-200 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-6xl font-bold text-gray-900">
+                            <span class="text-golden-600">Devair</span>
+                            <br>
+                            <span class="text-3xl lg:text-4xl text-gray-700 font-medium">0xdevair</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 max-w-lg">
+                            Web3 Analytics Expert & DeFi Research Leader. Building tools, dashboards, and insights that drive the decentralized future.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <span class="inline-flex items-center px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-medium">
+                            <i class="fas fa-users mr-2"></i>
+                            15K+ Twitter Audience
+                        </span>
+                        <span class="inline-flex items-center px-4 py-2 bg-golden-100 text-golden-700 rounded-full text-sm font-medium">
+                            <i class="fas fa-chart-line mr-2"></i>
+                            5K+ DeFi Users Onboarded
+                        </span>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#portfolio" class="bg-golden-500 hover:bg-golden-600 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="border-2 border-golden-500 text-golden-600 hover:bg-golden-500 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                            Let's Collaborate
+                        </a>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex space-x-6 pt-4">
+                        <a href="https://github.com/thenameisdevair" class="text-gray-600 hover:text-golden-600 transition-colors" data-mock="true">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://0xdevair.medium.com" class="text-gray-600 hover:text-golden-600 transition-colors" data-mock="true">
+                            <i class="fab fa-medium text-2xl"></i>
+                        </a>
+                        <a href="https://dune.com/devair_md" class="text-gray-600 hover:text-golden-600 transition-colors" data-mock="true">
+                            <i class="fas fa-chart-bar text-2xl"></i>
+                        </a>
+                        <a href="https://twitter.com/0xdevair" class="text-gray-600 hover:text-golden-600 transition-colors" data-mock="true">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <!-- Brand illustration would be placed here -->
+                        <div class="w-80 h-80 bg-gradient-to-br from-golden-200 to-pink-200 rounded-full flex items-center justify-center shadow-2xl">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23FCD34D'/%3E%3Ctext x='200' y='220' text-anchor='middle' font-size='120' fill='%23374151' font-family='monospace'%3E0x%3C/text%3E%3C/svg%3E" alt="Devair Brand Illustration" class="w-64 h-64 rounded-full object-cover" data-mock="true" data-implementation="Replace with actual brand illustration from uploaded file" />
+                        </div>
+                        <!-- Floating cherry blossoms -->
+                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-pink-300 rounded-full opacity-70 animate-pulse"></div>
+                        <div class="absolute top-20 -left-6 w-6 h-6 bg-pink-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
+                        <div class="absolute bottom-10 right-10 w-4 h-4 bg-pink-500 rounded-full opacity-50 animate-pulse delay-2000"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    About <span class="text-golden-600">Devair</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Leading Web3 analytics and DeFi research with data-driven insights that shape the decentralized ecosystem.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-cream-50 p-8 rounded-xl border border-golden-100">
+                    <div class="w-16 h-16 bg-golden-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Analytics Expert</h3>
+                    <p class="text-gray-600">
+                        Specialized in on-chain data tracking, DeFi project analysis, and creating dynamic dashboards that reveal market insights and trends.
+                    </p>
+                </div>
+                
+                <div class="bg-cream-50 p-8 rounded-xl border border-golden-100">
+                    <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Community Leader</h3>
+                    <p class="text-gray-600">
+                        Built a 15K+ Twitter audience and led DeFi education campaigns, onboarding over 5,000 users to decentralized finance.
+                    </p>
+                </div>
+                
+                <div class="bg-cream-50 p-8 rounded-xl border border-golden-100">
+                    <div class="w-16 h-16 bg-golden-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Research Pioneer</h3>
+                    <p class="text-gray-600">
+                        Trusted source for sybil-resistance research and in-depth analysis of emerging protocols like Humanity Protocol and Socket.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-cream-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Skills & <span class="text-golden-600">Technologies</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Comprehensive expertise across the Web3 development and analytics stack.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-golden-100 hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-golden-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-golden-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Languages</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>Python (Web3.py, Pandas)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>SQL</li>
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>Solidity</li>
+                    </ul>
+                </div>
+                
+                <!-- Analytics Tools -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-golden-100 hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-bar text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Analytics</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>Dune Analytics</li>
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>The Graph</li>
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>Matplotlib, Recharts</li>
+                    </ul>
+                </div>
+                
+                <!-- Infrastructure -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-golden-100 hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-golden-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-golden-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Infrastructure</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>Etherscan, Blockscout</li>
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>Alchemy, Infura</li>
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>QuickNode</li>
+                    </ul>
+                </div>
+                
+                <!-- Tools & APIs -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-golden-100 hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Tools & APIs</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>OpenAI APIs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>Telegram Bots</li>
+                        <li class="flex items-center"><i class="fas fa-check text-golden-500 mr-2"></i>Web3 Integrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Featured <span class="text-golden-600">Projects</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Innovative Web3 applications and analytical tools that push the boundaries of decentralized technology.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Jigsaw NFT Game -->
+                <div class="group bg-cream-50 rounded-xl overflow-hidden shadow-lg border border-golden-100 hover:shadow-2xl transition-all duration-300">
+                    <!-- Abstract representation of blockchain analytics dashboard -->
+                    <div class="h-64 bg-gradient-to-br from-golden-200 to-pink-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-puzzle-piece text-6xl text-golden-600 mb-4"></i>
+                            <p class="text-golden-700 font-medium">Jigsaw NFT Game Interface</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Jigsaw NFT Game</h3>
+                        <p class="text-gray-600 mb-6">
+                            Interactive NFT puzzle game built with Irys SDK, featuring on-chain asset management and gamified user engagement mechanics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-golden-100 text-golden-700 rounded-full text-sm">Irys SDK</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">NFTs</span>
+                            <span class="px-3 py-1 bg-cream-200 text-gray-700 rounded-full text-sm">Gaming</span>
+                        </div>
+                        <a href="#" class="text-golden-600 hover:text-golden-700 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform" data-mock="true">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Name Service Protocol -->
+                <div class="group bg-cream-50 rounded-xl overflow-hidden shadow-lg border border-golden-100 hover:shadow-2xl transition-all duration-300">
+                    <!-- Abstract representation of data visualization -->
+                    <div class="h-64 bg-gradient-to-br from-pink-200 to-golden-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-id-card text-6xl text-pink-600 mb-4"></i>
+                            <p class="text-pink-700 font-medium">Name Service Architecture</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Name Service Protocol</h3>
+                        <p class="text-gray-600 mb-6">
+                            Decentralized naming protocol developed with Superseed, enabling human-readable addresses and identity management on-chain.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-golden-100 text-golden-700 rounded-full text-sm">Superseed</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Protocol</span>
+                            <span class="px-3 py-1 bg-cream-200 text-gray-700 rounded-full text-sm">Identity</span>
+                        </div>
+                        <a href="#" class="text-golden-600 hover:text-golden-700 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform" data-mock="true">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-cream-50 p-6 rounded-xl border border-golden-100 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fab fa-telegram text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Telegram Analytics Bot</h3>
+                    <p class="text-gray-600 text-sm mb-4">Automated Kaito Yaps tracking system for real-time market sentiment analysis.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-pink-100 text-pink-600 rounded text-xs">Python</span>
+                        <span class="px-2 py-1 bg-golden-100 text-golden-700 rounded text-xs">APIs</span>
+                    </div>
+                </div>
+                
+                <div class="bg-cream-50 p-6 rounded-xl border border-golden-100 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-golden-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-golden-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Dynamic Dashboards</h3>
+                    <p class="text-gray-600 text-sm mb-4">Interactive Dune Analytics dashboards for DeFi protocols and market analysis.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-golden-100 text-golden-700 rounded text-xs">Dune</span>
+                        <span class="px-2 py-1 bg-pink-100 text-pink-600 rounded text-xs">SQL</span>
+                    </div>
+                </div>
+                
+                <div class="bg-cream-50 p-6 rounded-xl border border-golden-100 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-wallet text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Wallet Analytics Tools</h3>
+                    <p class="text-gray-600 text-sm mb-4">Comprehensive wallet tracking and analysis tools for DeFi portfolio management.</p>
+                    <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-pink-100 text-pink-600 rounded text-xs">Web3.py</span>
+                        <span class="px-2 py-1 bg-golden-100 text-golden-700 rounded text-xs">Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Content Section -->
+    <section id="research" class="py-20 bg-cream-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Research & <span class="text-golden-600">Content</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    In-depth analysis and educational content that drives the Web3 conversation forward.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Research Themes -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-golden-100">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Key Research Areas</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-golden-100 rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-link text-golden-600 text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">On-Chain Data Tracking</h4>
+                                    <p class="text-gray-600 text-sm">Advanced analytics for blockchain transaction patterns and user behavior.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-coins text-pink-500 text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">DeFi Project Analysis</h4>
+                                    <p class="text-gray-600 text-sm">Deep dives into protocol mechanics, tokenomics, and market positioning.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-golden-100 rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-shield-alt text-golden-600 text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Sybil-Resistance Research</h4>
+                                    <p class="text-gray-600 text-sm">Innovative approaches to identity verification and attack prevention.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-graduation-cap text-pink-500 text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Educational Content</h4>
+                                    <p class="text-gray-600 text-sm">Practical guides for Web3 adoption, trading strategies, and passive income.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Publications -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-golden-100 hover:shadow-xl transition-shadow group">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-golden-100 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-medium text-golden-600 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-gray-900 mb-2 group-hover:text-golden-600 transition-colors">Humanity Protocol Deep Dive</h4>
+                                <p class="text-gray-600 text-sm mb-3">Technical breakdown of proof-of-humanity mechanisms and their implications for Web3 identity.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-gray-500">Medium • Technical Analysis</span>
+                                    <a href="#" class="text-golden-600 hover:text-golden-700 text-sm font-medium" data-mock="true">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-golden-100 hover:shadow-xl transition-shadow group">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-chart-bar text-pink-500 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-gray-900 mb-2 group-hover:text-golden-600 transition-colors">Socket Protocol Analysis</h4>
+                                <p class="text-gray-600 text-sm mb-3">Comprehensive review of cross-chain infrastructure and bridge security mechanisms.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-gray-500">Dune Dashboard • Research</span>
+                                    <a href="#" class="text-golden-600 hover:text-golden-700 text-sm font-medium" data-mock="true">View Dashboard</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-golden-100 hover:shadow-xl transition-shadow group">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-golden-100 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-twitter text-golden-600 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-gray-900 mb-2 group-hover:text-golden-600 transition-colors">Web3 Passive Income Guide</h4>
+                                <p class="text-gray-600 text-sm mb-3">Educational thread series on sustainable DeFi yield strategies and risk management.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-gray-500">Twitter Thread • Educational</span>
+                                    <a href="#" class="text-golden-600 hover:text-golden-700 text-sm font-medium" data-mock="true">View Thread</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Notable <span class="text-golden-600">Achievements</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Recognition and partnerships that showcase impact in the Web3 ecosystem.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-cream-50 rounded-xl border border-golden-100">
+                    <div class="w-20 h-20 bg-golden-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-golden-600 mb-2">15K+</h3>
+                    <p class="text-gray-900 font-medium mb-2">Twitter Followers</p>
+                    <p class="text-gray-600 text-sm">Built before account compromise</p>
+                </div>
+                
+                <div class="text-center p-8 bg-cream-50 rounded-xl border border-golden-100">
+                    <div class="w-20 h-20 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-graduation-cap text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-pink-600 mb-2">5K+</h3>
+                    <p class="text-gray-900 font-medium mb-2">Users Onboarded</p>
+                    <p class="text-gray-600 text-sm">DeFi education campaigns</p>
+                </div>
+                
+                <div class="text-center p-8 bg-cream-50 rounded-xl border border-golden-100">
+                    <div class="w-20 h-20 bg-golden-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-golden-600 mb-2">3+</h3>
+                    <p class="text-gray-900 font-medium mb-2">Major Partnerships</p>
+                    <p class="text-gray-600 text-sm">CoinMarketCap, Ronin, Theoriq</p>
+                </div>
+            </div>
+            
+            <!-- Partnership Logos -->
+            <div class="mt-16 pt-8 border-t border-gray-200">
+                <p class="text-center text-gray-600 mb-8">Trusted by leading Web3 organizations</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 opacity-70">
+                    <div class="bg-gray-100 px-6 py-3 rounded-lg">
+                        <span class="font-bold text-gray-700">CoinMarketCap</span>
+                    </div>
+                    <div class="bg-gray-100 px-6 py-3 rounded-lg">
+                        <span class="font-bold text-gray-700">Ronin Network</span>
+                    </div>
+                    <div class="bg-gray-100 px-6 py-3 rounded-lg">
+                        <span class="font-bold text-gray-700">Theoriq</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-golden-50 to-pink-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Let's <span class="text-golden-600">Collaborate</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Ready to build the future of Web3? Get in touch for partnerships, consulting, or collaboration opportunities.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Contact Form -->
+                    <div class="p-8 lg:p-12">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+                        <form class="space-y-6" data-mock="true">
+                            <!-- TODO: Implement form submission logic -->
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-golden-500 focus:border-transparent" placeholder="Your name" data-mock="true">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-golden-500 focus:border-transparent" placeholder="your@email.com" data-mock="true">
+                            </div>
+                            
+                            <div>
+                                <label for="project-type" class="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
+                                <select id="project-type" name="project-type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-golden-500 focus:border-transparent" data-mock="true">
+                                    <option>Analytics Consulting</option>
+                                    <option>Dashboard Development</option>
+                                    <option>Research Partnership</option>
+                                    <option>Educational Content</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-golden-500 focus:border-transparent" placeholder="Tell me about your project..." data-mock="true"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-golden-500 hover:bg-golden-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="bg-gradient-to-br from-golden-500 to-golden-600 p-8 lg:p-12 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Twitter</p>
+                                    <p class="text-golden-100">@0xdevair</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-github text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">GitHub</p>
+                                    <p class="text-golden-100">github.com/thenameisdevair</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-medium text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Medium</p>
+                                    <p class="text-golden-100">0xdevair.medium.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-chart-bar text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Dune Analytics</p>
+                                    <p class="text-golden-100">dune.com/devair_md</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12 p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                            <h4 class="font-bold mb-2">Available for:</h4>
+                            <ul class="space-y-1 text-golden-100">
+                                <li>• Analytics consulting</li>
+                                <li>• Dashboard development</li>
+                                <li>• Research partnerships</li>
+                                <li>• Speaking engagements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-golden-300 mb-4">0xdevair</h3>
+                    <p class="text-gray-400 mb-6">
+                        Building the future of Web3 through analytics, research, and education.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-golden-300 transition-colors" data-mock="true">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-golden-300 transition-colors" data-mock="true">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-golden-300 transition-colors" data-mock="true">
+                            <i class="fab fa-medium text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-golden-300 transition-colors" data-mock="true">
+                            <i class="fas fa-chart-bar text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#research" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Web3 Analytics Consulting</li>
+                        <li>DeFi Dashboard Development</li>
+                        <li>Research & Technical Writing</li>
+                        <li>Educational Content Creation</li>
+                        <li>On-Chain Data Analysis</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Devair (0xdevair). Building the decentralized future, one insight at a time.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // TODO: Implement mobile menu toggle functionality
+                    console.log('Mobile menu toggle clicked');
+                });
+            }
+
+            // Form submission handler
+            const contactForm = document.querySelector('form[data-mock="true"]');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement actual form submission logic
+                    alert('Thank you for your message! I will get back to you soon.');
+                });
+            }
+
+            // Add scroll-based animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        })();
+    </script>
+</body>
+</html>

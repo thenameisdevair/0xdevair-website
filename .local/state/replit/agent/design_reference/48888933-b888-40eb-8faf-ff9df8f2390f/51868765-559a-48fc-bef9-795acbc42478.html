@@ -1,0 +1,447 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Johnson - Full Stack Developer & Designer</title>
+    <meta name="description" content="Full Stack Developer and Designer specializing in modern web applications, user experience design, and innovative digital solutions.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#1E293B',
+                        accent: '#F59E0B',
+                        neutral: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563EB 0%, #1E293B 100%);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-inter bg-white text-secondary">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-bold text-xl text-primary">AJ</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-primary transition-colors">Portfolio</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen gradient-bg flex items-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <div class="fade-in">
+                <!-- Professional headshot of a developer in a modern office setting -->
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300" 
+                     alt="Alex Johnson - Professional headshot" 
+                     class="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-white/20">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Alex Johnson</h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">Full Stack Developer & UX Designer</p>
+                <p class="text-lg mb-12 max-w-2xl mx-auto text-blue-50">Crafting digital experiences that blend beautiful design with powerful functionality. Specialized in modern web technologies and user-centered design.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#portfolio" class="bg-accent hover:bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-neutral">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Passionate about creating exceptional digital experiences through the perfect blend of design and development.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <!-- Developer working on code with multiple monitors in a modern workspace -->
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Modern development workspace with multiple monitors" 
+                         class="rounded-2xl shadow-2xl">
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Building the Future, One Line at a Time</h3>
+                    <p class="text-gray-700 mb-6">With over 5 years of experience in full-stack development, I specialize in creating scalable web applications that deliver exceptional user experiences. My journey began with a passion for problem-solving and has evolved into expertise across the entire development lifecycle.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary mb-2" data-bind="projects.count">50+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary mb-2" data-bind="experience.years">5+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-700">When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge through mentoring and technical writing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A showcase of my recent work spanning web applications, mobile solutions, and design systems.</p>
+            </div>
+
+            <!-- @MAP: projects.map(project => ( -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Modern e-commerce website interface on laptop screen -->
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="E-commerce platform interface" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4" data-bind="project.description">Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include real-time inventory, advanced filtering, and admin dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold" data-implementation="Link to live demo">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold" data-implementation="Link to GitHub repo">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Mobile app interface showing task management -->
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Task management mobile app interface" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">Task Management App</h3>
+                        <p class="text-gray-600 mb-4" data-bind="project.description">Cross-platform mobile application built with React Native. Features team collaboration, real-time updates, and advanced project analytics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React Native</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Firebase</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Redux</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold" data-implementation="Link to app store">
+                                <i class="fas fa-mobile-alt mr-2"></i>App Store
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold" data-implementation="Link to case study">
+                                <i class="fas fa-book mr-2"></i>Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in" data-mock="true">
+                    <!-- Data visualization dashboard with charts and graphs -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Analytics dashboard with data visualizations" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-bind="project.title">Analytics Dashboard</h3>
+                        <p class="text-gray-600 mb-4" data-bind="project.description">Comprehensive business intelligence dashboard with real-time data visualization, custom reporting, and predictive analytics capabilities.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Vue.js</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">D3.js</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Python</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-700 font-semibold" data-implementation="Link to live demo">
+                                <i class="fas fa-chart-bar mr-2"></i>View Dashboard
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 font-semibold" data-implementation="Link to documentation">
+                                <i class="fas fa-file-alt mr-2"></i>Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+
+            <div class="text-center mt-12 fade-in">
+                <a href="#" class="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center transition-colors" data-implementation="Link to full portfolio">
+                    <i class="fas fa-folder-open mr-2"></i>
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-neutral">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4">Skills & Expertise</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A comprehensive toolkit for building modern, scalable applications across the full development stack.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center fade-in">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">React</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Vue.js</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">TypeScript</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Tailwind CSS</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Next.js</span>
+                    </div>
+                </div>
+
+                <div class="text-center fade-in">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-server text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Backend Development</h3>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Node.js</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Python</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">PostgreSQL</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">MongoDB</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Docker</span>
+                    </div>
+                </div>
+
+                <div class="text-center fade-in">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-palette text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Design & Tools</h3>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Figma</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Adobe XD</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Git</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">AWS</span>
+                        <span class="skill-badge px-4 py-2 bg-white rounded-lg shadow-sm text-sm font-medium">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ready to bring your next project to life? I'd love to hear from you and discuss how we can create something amazing together.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-primary w-6"></i>
+                            <span class="ml-4" data-bind="contact.email">alex.johnson@email.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-primary w-6"></i>
+                            <span class="ml-4" data-bind="contact.phone">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-primary w-6"></i>
+                            <span class="ml-4" data-bind="contact.location">San Francisco, CA</span>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-primary text-2xl transition-colors" data-implementation="Link to LinkedIn profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary text-2xl transition-colors" data-implementation="Link to GitHub profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary text-2xl transition-colors" data-implementation="Link to Twitter profile">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary text-2xl transition-colors" data-implementation="Link to Dribbble profile">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <!-- @COMPONENT: ContactForm -->
+                    <form class="space-y-6" data-implementation="Handle form submission with validation">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                                   placeholder="Your Name" data-bind="form.name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                                   placeholder="your.email@example.com" data-bind="form.email">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                                   placeholder="Project Inquiry" data-bind="form.subject">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                                      placeholder="Tell me about your project..." data-bind="form.message"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors"
+                                data-event="click:handleSubmit" data-implementation="Should validate form and send email">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                    <!-- @END_COMPONENT: ContactForm -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="font-bold text-2xl mb-4">Alex Johnson</div>
+                <p class="text-gray-300 mb-6">Full Stack Developer & UX Designer</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" data-implementation="Link to LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" data-implementation="Link to GitHub">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" data-implementation="Link to Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" data-implementation="Link to email">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+                <div class="border-t border-gray-600 pt-8">
+                    <p class="text-gray-400">© 2024 Alex Johnson. All rights reserved. Built with passion and modern web technologies.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Fade in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Mobile menu toggle (placeholder)
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // TODO: Implement mobile menu toggle functionality
+                    console.log('Mobile menu toggle clicked');
+                });
+            }
+
+            // Form submission handling (placeholder)
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form validation and submission logic
+                    alert('Thank you for your message! I\'ll get back to you soon.');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

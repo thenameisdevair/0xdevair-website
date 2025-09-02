@@ -1,0 +1,444 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevAir | Web3 Data Analyst & Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-primary': '#1a1a1a',
+                        'dark-secondary': '#2a2a2a',
+                        'cherry-pink': '#E8A5C0',
+                        'text-primary': '#FFFFFF',
+                        'text-secondary': '#B3B3B3',
+                        'accent-blue': '#60A5FA'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out'
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .cherry-blossom {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #E8A5C0;
+            border-radius: 50% 0 50% 0;
+            transform: rotate(45deg);
+            opacity: 0.6;
+        }
+        .cherry-blossom::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #E8A5C0;
+            border-radius: 50% 0 50% 0;
+            transform: rotate(90deg);
+            top: -10px;
+            left: -10px;
+        }
+    </style>
+</head>
+<body class="bg-dark-primary text-text-primary font-inter overflow-x-hidden">
+    
+    <!-- Cherry Blossom Decorations -->
+    <div class="cherry-blossom animate-float" style="top: 10%; left: 85%; animation-delay: 0s;"></div>
+    <div class="cherry-blossom animate-float" style="top: 25%; right: 90%; animation-delay: 2s;"></div>
+    <div class="cherry-blossom animate-float" style="top: 45%; left: 5%; animation-delay: 4s;"></div>
+    <div class="cherry-blossom animate-float" style="top: 70%; right: 10%; animation-delay: 1s;"></div>
+    <div class="cherry-blossom animate-float" style="top: 85%; left: 15%; animation-delay: 3s;"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-dark-primary/90 backdrop-blur-sm border-b border-dark-secondary">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-cherry-pink">@0xdevair</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-text-secondary hover:text-cherry-pink transition-colors duration-300">About</a>
+                    <a href="#skills" class="text-text-secondary hover:text-cherry-pink transition-colors duration-300">Skills</a>
+                    <a href="#projects" class="text-text-secondary hover:text-cherry-pink transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-text-secondary hover:text-cherry-pink transition-colors duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-text-secondary hover:text-cherry-pink">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="animate-slide-up">
+                <div class="mb-6">
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-4">
+                        Web3 Data <span class="text-cherry-pink">Analyst</span>
+                    </h1>
+                    <h2 class="text-2xl lg:text-3xl font-light text-text-secondary mb-6">
+                        Building tools, dashboards & insights for the decentralized future
+                    </h2>
+                </div>
+                
+                <p class="text-lg text-text-secondary mb-8 leading-relaxed">
+                    Specializing in on-chain analytics, DeFi research, and data visualization. 
+                    Helping traders and protocols make data-driven decisions through 
+                    Python, SQL, and Solidity expertise.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <span class="px-4 py-2 bg-dark-secondary rounded-full text-sm font-medium">Python & Web3.py</span>
+                    <span class="px-4 py-2 bg-dark-secondary rounded-full text-sm font-medium">Dune Analytics</span>
+                    <span class="px-4 py-2 bg-dark-secondary rounded-full text-sm font-medium">Solidity</span>
+                    <span class="px-4 py-2 bg-dark-secondary rounded-full text-sm font-medium">On-chain Research</span>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="#projects" class="bg-cherry-pink text-dark-primary px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="border border-cherry-pink text-cherry-pink px-8 py-3 rounded-lg font-semibold hover:bg-cherry-pink hover:text-dark-primary transition-all duration-300">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center lg:justify-end animate-fade-in">
+                <!-- Brand illustration positioned prominently -->
+                <div class="relative">
+                    <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-dark-secondary to-dark-primary p-8 shadow-2xl">
+                        <!-- Using the brand illustration as the main visual element -->
+                        <img src="data:image/jpeg;base64,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" alt="DevAir Brand Illustration" class="w-full h-full object-cover rounded-lg" data-mock="true">
+                    </div>
+                    <!-- Floating cherry blossoms around the illustration -->
+                    <div class="cherry-blossom animate-float absolute -top-4 -right-4" style="animation-delay: 1s;"></div>
+                    <div class="cherry-blossom animate-float absolute -bottom-4 -left-4" style="animation-delay: 3s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-dark-secondary/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center animate-slide-up">About DevAir</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-cherry-pink/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-2xl text-cherry-pink"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">15K+ Audience</h3>
+                    <p class="text-text-secondary">Built a trusted following in Web3 community before Twitter hack</p>
+                </div>
+                
+                <div class="text-center animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-cherry-pink/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-2xl text-cherry-pink"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">5,000+ Users</h3>
+                    <p class="text-text-secondary">Onboarded thousands through DeFi education campaigns</p>
+                </div>
+                
+                <div class="text-center animate-slide-up" style="animation-delay: 0.6s;">
+                    <div class="w-16 h-16 bg-cherry-pink/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-2xl text-cherry-pink"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Top Partnerships</h3>
+                    <p class="text-text-secondary">Collaborated with CoinMarketCap, Ronin Network, and Theoriq</p>
+                </div>
+            </div>
+
+            <div class="bg-dark-secondary rounded-xl p-8 animate-slide-up" style="animation-delay: 0.8s;">
+                <blockquote class="text-lg text-center text-text-secondary italic leading-relaxed">
+                    "Specializing in on-chain data tracking, DeFi project analysis, and sybil-resistance research. 
+                    My goal is to be perceived as extremely valuable — to follow, hire, collaborate with, or pay."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center animate-slide-up">Core Skills & Tools</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Programming Languages -->
+                <div class="bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300 hover:scale-105 animate-slide-up">
+                    <h3 class="text-xl font-semibold mb-4 text-cherry-pink">Languages</h3>
+                    <ul class="space-y-2 text-text-secondary">
+                        <li class="flex items-center"><i class="fas fa-code text-cherry-pink mr-2"></i> Python (Web3.py, Pandas)</li>
+                        <li class="flex items-center"><i class="fas fa-database text-cherry-pink mr-2"></i> SQL</li>
+                        <li class="flex items-center"><i class="fas fa-cube text-cherry-pink mr-2"></i> Solidity</li>
+                    </ul>
+                </div>
+
+                <!-- Analytics & Infrastructure -->
+                <div class="bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300 hover:scale-105 animate-slide-up" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-semibold mb-4 text-cherry-pink">Analytics</h3>
+                    <ul class="space-y-2 text-text-secondary">
+                        <li class="flex items-center"><i class="fas fa-chart-bar text-cherry-pink mr-2"></i> Dune Analytics</li>
+                        <li class="flex items-center"><i class="fas fa-search text-cherry-pink mr-2"></i> Etherscan, Blockscout</li>
+                        <li class="flex items-center"><i class="fas fa-project-diagram text-cherry-pink mr-2"></i> The Graph, Matplotlib</li>
+                    </ul>
+                </div>
+
+                <!-- Infrastructure -->
+                <div class="bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300 hover:scale-105 animate-slide-up" style="animation-delay: 0.4s;">
+                    <h3 class="text-xl font-semibold mb-4 text-cherry-pink">Infrastructure</h3>
+                    <ul class="space-y-2 text-text-secondary">
+                        <li class="flex items-center"><i class="fas fa-server text-cherry-pink mr-2"></i> Alchemy, Infura</li>
+                        <li class="flex items-center"><i class="fas fa-bolt text-cherry-pink mr-2"></i> QuickNode</li>
+                        <li class="flex items-center"><i class="fas fa-robot text-cherry-pink mr-2"></i> OpenAI APIs, Telegram Bots</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-dark-secondary/30">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center animate-slide-up">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: Jigsaw NFT Game -->
+                <div class="bg-dark-secondary rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-lg animate-slide-up">
+                    <div class="h-48 bg-gradient-to-br from-cherry-pink/20 to-dark-primary flex items-center justify-center">
+                        <i class="fas fa-puzzle-piece text-4xl text-cherry-pink"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Jigsaw NFT Game</h3>
+                        <p class="text-text-secondary mb-4">Built using Irys SDK for decentralized storage and gameplay mechanics</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Irys SDK</span>
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">NFTs</span>
+                        </div>
+                        <a href="#" class="text-cherry-pink hover:text-cherry-pink/80 font-medium flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Name Service Protocol -->
+                <div class="bg-dark-secondary rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-lg animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="h-48 bg-gradient-to-br from-accent-blue/20 to-dark-primary flex items-center justify-center">
+                        <i class="fas fa-id-card text-4xl text-accent-blue"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Name Service Protocol</h3>
+                        <p class="text-text-secondary mb-4">Superseed project for decentralized identity management</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Superseed</span>
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Identity</span>
+                        </div>
+                        <a href="#" class="text-accent-blue hover:text-accent-blue/80 font-medium flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Telegram Analytics Bot -->
+                <div class="bg-dark-secondary rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-lg animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="h-48 bg-gradient-to-br from-green-500/20 to-dark-primary flex items-center justify-center">
+                        <i class="fab fa-telegram-plane text-4xl text-green-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Kaito Yaps Tracker</h3>
+                        <p class="text-text-secondary mb-4">Telegram bot for tracking and analyzing crypto market sentiment</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Telegram API</span>
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Analytics</span>
+                        </div>
+                        <a href="#" class="text-green-400 hover:text-green-400/80 font-medium flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Dune Dashboards -->
+                <div class="bg-dark-secondary rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-lg animate-slide-up" style="animation-delay: 0.6s;">
+                    <div class="h-48 bg-gradient-to-br from-purple-500/20 to-dark-primary flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-4xl text-purple-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Dynamic Dashboards</h3>
+                        <p class="text-text-secondary mb-4">Comprehensive analytics dashboards on Dune for DeFi protocols</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Dune Analytics</span>
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">DeFi</span>
+                        </div>
+                        <a href="https://dune.com/devair_md" class="text-purple-400 hover:text-purple-400/80 font-medium flex items-center">
+                            View Dashboards <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Wallet Analytics -->
+                <div class="bg-dark-secondary rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-lg animate-slide-up" style="animation-delay: 0.8s;">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500/20 to-dark-primary flex items-center justify-center">
+                        <i class="fas fa-wallet text-4xl text-yellow-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Wallet Analytics Tools</h3>
+                        <p class="text-text-secondary mb-4">Advanced tools for tracking and analyzing wallet behaviors and patterns</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Python</span>
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Web3.py</span>
+                        </div>
+                        <a href="#" class="text-yellow-400 hover:text-yellow-400/80 font-medium flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: Research Publications -->
+                <div class="bg-dark-secondary rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-lg animate-slide-up" style="animation-delay: 1s;">
+                    <div class="h-48 bg-gradient-to-br from-cherry-pink/20 to-dark-primary flex items-center justify-center">
+                        <i class="fas fa-book-open text-4xl text-cherry-pink"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Research Publications</h3>
+                        <p class="text-text-secondary mb-4">Deep insights on Humanity Protocol, Socket, Camp, and sybil-resistance</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Medium</span>
+                            <span class="px-3 py-1 bg-dark-primary rounded-full text-xs">Research</span>
+                        </div>
+                        <a href="https://0xdevair.medium.com" class="text-cherry-pink hover:text-cherry-pink/80 font-medium flex items-center">
+                            Read Articles <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8 animate-slide-up">Let's Connect</h2>
+            <p class="text-xl text-text-secondary mb-12 animate-slide-up" style="animation-delay: 0.2s;">
+                Ready to collaborate on your next Web3 project or need expert analysis?
+            </p>
+
+            <!-- Social Links Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <a href="https://twitter.com/0xdevair" class="bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300 hover:scale-105 group animate-slide-up" style="animation-delay: 0.3s;">
+                    <i class="fab fa-twitter text-3xl text-accent-blue mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm text-text-secondary">Twitter</div>
+                    <div class="font-semibold">@0xdevair</div>
+                </a>
+
+                <a href="https://github.com/thenameisdevair" class="bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300 hover:scale-105 group animate-slide-up" style="animation-delay: 0.4s;">
+                    <i class="fab fa-github text-3xl text-text-primary mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm text-text-secondary">GitHub</div>
+                    <div class="font-semibold">thenameisdevair</div>
+                </a>
+
+                <a href="https://0xdevair.medium.com" class="bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300 hover:scale-105 group animate-slide-up" style="animation-delay: 0.5s;">
+                    <i class="fab fa-medium text-3xl text-text-primary mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm text-text-secondary">Medium</div>
+                    <div class="font-semibold">0xdevair</div>
+                </a>
+
+                <a href="https://dune.com/devair_md" class="bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300 hover:scale-105 group animate-slide-up" style="animation-delay: 0.6s;">
+                    <i class="fas fa-chart-bar text-3xl text-purple-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm text-text-secondary">Dune Analytics</div>
+                    <div class="font-semibold">devair_md</div>
+                </a>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="bg-gradient-to-r from-cherry-pink/10 to-accent-blue/10 rounded-xl p-8 animate-slide-up" style="animation-delay: 0.8s;">
+                <h3 class="text-2xl font-semibold mb-4">Ready to Work Together?</h3>
+                <p class="text-text-secondary mb-6">
+                    Whether you need on-chain analysis, dashboard development, or strategic Web3 insights, 
+                    I'm here to help you make data-driven decisions.
+                </p>
+                <a href="mailto:contact@0xdevair.com" class="bg-cherry-pink text-dark-primary px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 inline-flex items-center" data-mock="true">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 bg-dark-secondary border-t border-dark-primary">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-text-secondary">
+                © 2024 DevAir (@0xdevair). Building the future of Web3 analytics.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Smooth scrolling script -->
+    <script>
+        // TODO: Implement smooth scrolling, mobile menu toggle, and contact form handling
+        (function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Simple intersection observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.animate-slide-up').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>

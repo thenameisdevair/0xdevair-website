@@ -1,0 +1,738 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devair (0xdevair) - Web3 & DeFi Analytics Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-indigo': '#1E1B4B',
+                        'cyber-blue': '#3B82F6',
+                        'neon-purple': '#8B5CF6',
+                        'dark-navy': '#0F0F23',
+                        'lighter-navy': '#1A1B2E',
+                        'text-primary': '#F8FAFC',
+                        'text-secondary': '#94A3B8'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    backgroundImage: {
+                        'gradient-cyber': 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                        'gradient-indigo': 'linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%)',
+                        'gradient-dark': 'linear-gradient(135deg, #0F0F23 0%, #1A1B2E 100%)'
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-dark-navy text-text-primary font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-dark-navy/90 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold bg-gradient-cyber bg-clip-text text-transparent">
+                    0xdevair
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-cyber-blue transition-colors">About</a>
+                    <a href="#skills" class="hover:text-cyber-blue transition-colors">Skills</a>
+                    <a href="#portfolio" class="hover:text-cyber-blue transition-colors">Portfolio</a>
+                    <a href="#research" class="hover:text-cyber-blue transition-colors">Research</a>
+                    <a href="#contact" class="hover:text-cyber-blue transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-text-primary">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Background blockchain analytics dashboard image -->
+        <div class="absolute inset-0 opacity-10">
+            <!-- Modern blockchain analytics dashboard with multiple charts and data visualizations -->
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" alt="Blockchain analytics dashboard" class="w-full h-full object-cover" />
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="bg-gradient-cyber bg-clip-text text-transparent">Devair</span>
+                    <br>
+                    <span class="text-text-secondary text-2xl md:text-3xl font-normal">(0xdevair)</span>
+                </h1>
+                
+                <div class="text-2xl md:text-3xl mb-8 h-16 flex items-center justify-center">
+                    <span id="rotating-title" class="bg-gradient-indigo bg-clip-text text-transparent font-semibold">
+                        Web3 Analytics Expert
+                    </span>
+                </div>
+                
+                <p class="text-xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Transforming blockchain data into actionable insights. Building tools, dashboards, and educational content for the DeFi ecosystem.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#portfolio" class="bg-gradient-cyber px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transition-all transform hover:scale-105">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border border-cyber-blue px-8 py-4 rounded-lg font-semibold hover:bg-cyber-blue/10 transition-all">
+                        Let's Collaborate
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-cyber-blue" data-counter="15000">0</div>
+                        <div class="text-text-secondary">Twitter Followers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-neon-purple" data-counter="5000">0</div>
+                        <div class="text-text-secondary">Users Onboarded</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-cyber-blue" data-counter="50">0</div>
+                        <div class="text-text-secondary">Dashboards Built</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-neon-purple" data-counter="3">0</div>
+                        <div class="text-text-secondary">Major Partnerships</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-lighter-navy">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">About <span class="bg-gradient-cyber bg-clip-text text-transparent">Me</span></h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- Professional Web3 analyst working with multiple monitors showing DeFi analytics -->
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Web3 development workspace" class="rounded-xl shadow-2xl" />
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-text-secondary leading-relaxed">
+                            I'm a Web3 analytics expert specializing in DeFi research, sybil-resistance analysis, and blockchain data interpretation. With a background in data science and a passion for decentralized finance, I bridge the gap between complex on-chain data and actionable insights.
+                        </p>
+                        
+                        <p class="text-lg text-text-secondary leading-relaxed">
+                            My work has helped onboard 5,000+ users to DeFi, and I've built partnerships with industry leaders like CoinMarketCap, Ronin Network, and Theoriq. I'm currently pursuing a PhD while building tools that make blockchain data more accessible.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="bg-dark-navy/50 p-4 rounded-lg border border-gray-800">
+                                <div class="text-2xl font-bold text-cyber-blue">15K+</div>
+                                <div class="text-sm text-text-secondary">Twitter Audience Built</div>
+                            </div>
+                            <div class="bg-dark-navy/50 p-4 rounded-lg border border-gray-800">
+                                <div class="text-2xl font-bold text-neon-purple">PhD</div>
+                                <div class="text-sm text-text-secondary">In Progress</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">Skills & <span class="bg-gradient-indigo bg-clip-text text-transparent">Tools</span></h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Programming Languages -->
+                    <div class="bg-lighter-navy/50 p-8 rounded-xl border border-gray-800 hover:border-cyber-blue/50 transition-all">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-code text-4xl text-cyber-blue mb-4"></i>
+                            <h3 class="text-xl font-semibold">Programming</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span>Python</span>
+                                <div class="flex space-x-1">
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>SQL</span>
+                                <div class="flex space-x-1">
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Solidity</span>
+                                <div class="flex space-x-1">
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+                                    <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                                    <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Analytics Tools -->
+                    <div class="bg-lighter-navy/50 p-8 rounded-xl border border-gray-800 hover:border-neon-purple/50 transition-all">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-chart-line text-4xl text-neon-purple mb-4"></i>
+                            <h3 class="text-xl font-semibold">Analytics</h3>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">Dune Analytics</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">The Graph</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">Etherscan</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">Matplotlib</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">Pandas</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">Recharts</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Infrastructure -->
+                    <div class="bg-lighter-navy/50 p-8 rounded-xl border border-gray-800 hover:border-cyber-blue/50 transition-all">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-server text-4xl text-cyber-blue mb-4"></i>
+                            <h3 class="text-xl font-semibold">Infrastructure</h3>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">Alchemy</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">Infura</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">QuickNode</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">Web3.py</span>
+                            <span class="inline-block bg-dark-navy px-3 py-1 rounded-full text-sm">OpenAI APIs</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education & Certifications -->
+                <div class="mt-16 bg-gradient-dark p-8 rounded-xl border border-gray-800">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Education & Certifications</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-cyber-blue mb-2">Coursera Certifications</h4>
+                            <ul class="text-text-secondary space-y-1">
+                                <li>• Foundations of Data (ETL, visualization)</li>
+                                <li>• Advanced SQL</li>
+                                <li>• UX Design</li>
+                                <li>• Blockchain Cybersecurity</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-neon-purple mb-2">Additional Training</h4>
+                            <ul class="text-text-secondary space-y-1">
+                                <li>• Angela Yu's Python Bootcamp</li>
+                                <li>• PhD in Progress</li>
+                                <li>• Self-taught DeFi Research</li>
+                                <li>• Sybil-resistance Specialist</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-lighter-navy">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">Featured <span class="bg-gradient-cyber bg-clip-text text-transparent">Projects</span></h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Jigsaw NFT Game -->
+                    <div class="bg-dark-navy/50 rounded-xl overflow-hidden border border-gray-800 hover:border-cyber-blue/50 transition-all group">
+                        <!-- Modern DeFi trading interface with charts and trading panels -->
+                        <img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="DeFi trading interface" class="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Jigsaw NFT Game</h3>
+                            <p class="text-text-secondary mb-4">Interactive NFT puzzle game built with Irys SDK, featuring on-chain storage and dynamic metadata.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyber-blue/20 text-cyber-blue px-2 py-1 rounded text-sm">Irys SDK</span>
+                                <span class="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-sm">NFT</span>
+                                <span class="bg-cyber-blue/20 text-cyber-blue px-2 py-1 rounded text-sm">Gaming</span>
+                            </div>
+                            <a href="#" class="text-cyber-blue hover:underline">View Project →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Name Service Protocol -->
+                    <div class="bg-dark-navy/50 rounded-xl overflow-hidden border border-gray-800 hover:border-neon-purple/50 transition-all group">
+                        <!-- Complex data visualization dashboard with multiple chart types -->
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Data visualization charts" class="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Name Service Protocol</h3>
+                            <p class="text-text-secondary mb-4">Decentralized naming system built during Superseed accelerator program with custom resolution logic.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-sm">Superseed</span>
+                                <span class="bg-cyber-blue/20 text-cyber-blue px-2 py-1 rounded text-sm">Protocol</span>
+                                <span class="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-sm">DNS</span>
+                            </div>
+                            <a href="#" class="text-neon-purple hover:underline">View Project →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Telegram Bot -->
+                    <div class="bg-dark-navy/50 rounded-xl overflow-hidden border border-gray-800 hover:border-cyber-blue/50 transition-all group">
+                        <!-- Modern web development workspace with multiple screens showing code -->
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Web3 development workspace" class="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Kaito Yaps Tracker</h3>
+                            <p class="text-text-secondary mb-4">Automated Telegram bot for tracking and analyzing Kaito Yaps metrics with real-time notifications.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyber-blue/20 text-cyber-blue px-2 py-1 rounded text-sm">Python</span>
+                                <span class="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-sm">Telegram</span>
+                                <span class="bg-cyber-blue/20 text-cyber-blue px-2 py-1 rounded text-sm">Analytics</span>
+                            </div>
+                            <a href="#" class="text-cyber-blue hover:underline">View Project →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Wallet Analytics -->
+                    <div class="bg-dark-navy/50 rounded-xl overflow-hidden border border-gray-800 hover:border-neon-purple/50 transition-all group md:col-span-2 lg:col-span-1">
+                        <!-- Advanced blockchain analytics dashboard showing wallet transaction flows -->
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Blockchain analytics dashboard" class="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Wallet Analytics Tools</h3>
+                            <p class="text-text-secondary mb-4">Comprehensive wallet analysis tools for sybil detection, behavioral patterns, and risk assessment.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-sm">Analytics</span>
+                                <span class="bg-cyber-blue/20 text-cyber-blue px-2 py-1 rounded text-sm">Sybil Detection</span>
+                                <span class="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-sm">Risk Analysis</span>
+                            </div>
+                            <a href="#" class="text-neon-purple hover:underline">View Project →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Dune Dashboards -->
+                    <div class="bg-dark-navy/50 rounded-xl overflow-hidden border border-gray-800 hover:border-cyber-blue/50 transition-all group md:col-span-2">
+                        <!-- Comprehensive DeFi analytics interface with multiple data streams -->
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=400" alt="Data visualization charts" class="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Dynamic Dune Dashboards</h3>
+                            <p class="text-text-secondary mb-4">Collection of interactive dashboards analyzing DeFi protocols, airdrops, and on-chain behavior patterns with real-time data visualization.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyber-blue/20 text-cyber-blue px-2 py-1 rounded text-sm">Dune Analytics</span>
+                                <span class="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-sm">SQL</span>
+                                <span class="bg-cyber-blue/20 text-cyber-blue px-2 py-1 rounded text-sm">DeFi</span>
+                                <span class="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-sm">Visualization</span>
+                            </div>
+                            <a href="#" class="text-cyber-blue hover:underline">View Dashboards →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Content Section -->
+    <section id="research" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">Research & <span class="bg-gradient-indigo bg-clip-text text-transparent">Content</span></h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Research Themes -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-cyber-blue">Key Research Areas</h3>
+                        <div class="space-y-4">
+                            <div class="bg-lighter-navy/50 p-4 rounded-lg border border-gray-800">
+                                <h4 class="font-semibold mb-2">On-chain Data Tracking</h4>
+                                <p class="text-text-secondary text-sm">Advanced analysis of blockchain transactions, wallet behaviors, and protocol interactions.</p>
+                            </div>
+                            <div class="bg-lighter-navy/50 p-4 rounded-lg border border-gray-800">
+                                <h4 class="font-semibold mb-2">DeFi Project Analysis</h4>
+                                <p class="text-text-secondary text-sm">Deep dives into protocol mechanics, tokenomics, and market dynamics.</p>
+                            </div>
+                            <div class="bg-lighter-navy/50 p-4 rounded-lg border border-gray-800">
+                                <h4 class="font-semibold mb-2">Sybil-Resistance Research</h4>
+                                <p class="text-text-secondary text-sm">Identifying patterns and developing frameworks for detecting coordinated wallet activities.</p>
+                            </div>
+                            <div class="bg-lighter-navy/50 p-4 rounded-lg border border-gray-800">
+                                <h4 class="font-semibold mb-2">Technical Breakdowns</h4>
+                                <p class="text-text-secondary text-sm">In-depth analysis of protocols like Humanity Protocol, Socket, and emerging Web3 technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Content Formats -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-neon-purple">Content Formats</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <i class="fab fa-twitter text-2xl text-cyber-blue mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold">Twitter Threads</h4>
+                                    <p class="text-text-secondary text-sm">Educational and actionable content reaching 15K+ followers</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fab fa-medium text-2xl text-neon-purple mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold">Medium Articles</h4>
+                                    <p class="text-text-secondary text-sm">Technical essays and deep-dive analysis pieces</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fab fa-github text-2xl text-cyber-blue mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold">GitHub Documentation</h4>
+                                    <p class="text-text-secondary text-sm">Technical documentation and open-source contributions</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-chart-bar text-2xl text-neon-purple mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold">Dune Dashboards</h4>
+                                    <p class="text-text-secondary text-sm">Interactive data visualizations and analytics tools</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Recent Articles -->
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Recent Publications</h4>
+                            <div class="space-y-3">
+                                <a href="#" class="block p-3 bg-dark-navy/30 rounded hover:bg-dark-navy/50 transition-colors">
+                                    <div class="font-medium text-sm">Humanity Protocol: A Deep Dive into Proof of Humanity</div>
+                                    <div class="text-xs text-text-secondary">Technical analysis • Medium</div>
+                                </a>
+                                <a href="#" class="block p-3 bg-dark-navy/30 rounded hover:bg-dark-navy/50 transition-colors">
+                                    <div class="font-medium text-sm">Socket Bridge Analysis: Security and Usage Patterns</div>
+                                    <div class="text-xs text-text-secondary">Research thread • Twitter</div>
+                                </a>
+                                <a href="#" class="block p-3 bg-dark-navy/30 rounded hover:bg-dark-navy/50 transition-colors">
+                                    <div class="font-medium text-sm">Passive Income Strategies in Web3</div>
+                                    <div class="text-xs text-text-secondary">How-to guide • Medium</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-20 bg-lighter-navy">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">Achievements & <span class="bg-gradient-cyber bg-clip-text text-transparent">Partnerships</span></h2>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <!-- Partnership 1 -->
+                    <div class="bg-dark-navy/50 p-6 rounded-xl border border-gray-800 text-center">
+                        <div class="w-16 h-16 bg-gradient-cyber rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-coins text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">CoinMarketCap</h3>
+                        <p class="text-text-secondary text-sm">Partnership for DeFi education and content creation</p>
+                    </div>
+                    
+                    <!-- Partnership 2 -->
+                    <div class="bg-dark-navy/50 p-6 rounded-xl border border-gray-800 text-center">
+                        <div class="w-16 h-16 bg-gradient-indigo rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-network-wired text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Ronin Network</h3>
+                        <p class="text-text-secondary text-sm">Analytics collaboration for gaming ecosystem insights</p>
+                    </div>
+                    
+                    <!-- Partnership 3 -->
+                    <div class="bg-dark-navy/50 p-6 rounded-xl border border-gray-800 text-center">
+                        <div class="w-16 h-16 bg-gradient-cyber rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Theoriq</h3>
+                        <p class="text-text-secondary text-sm">Research partnership for AI and blockchain integration</p>
+                    </div>
+                </div>
+                
+                <!-- Key Achievements -->
+                <div class="bg-gradient-dark p-8 rounded-xl border border-gray-800">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Key Achievements</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-cyber-blue"></i>
+                                <span>Built 15K+ Twitter audience (before hack)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-cyber-blue"></i>
+                                <span>Led DeFi education campaigns with 5,000+ onboarded users</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-cyber-blue"></i>
+                                <span>Published insights on major protocols (Humanity, Socket, Camp)</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-neon-purple"></i>
+                                <span>Became trusted source for sybil-resistance research</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-neon-purple"></i>
+                                <span>Built 50+ dashboards analyzing airdrops and protocols</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-neon-purple"></i>
+                                <span>Established partnerships with industry leaders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">Connect & <span class="bg-gradient-indigo bg-clip-text text-transparent">Follow</span></h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="https://twitter.com/0xdevair" class="group flex flex-col items-center p-4 bg-lighter-navy/50 rounded-xl border border-gray-800 hover:border-cyber-blue/50 transition-all">
+                        <i class="fab fa-twitter text-2xl text-cyber-blue group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm mt-2">Twitter</span>
+                    </a>
+                    
+                    <a href="https://github.com/thenameisdevair" class="group flex flex-col items-center p-4 bg-lighter-navy/50 rounded-xl border border-gray-800 hover:border-neon-purple/50 transition-all">
+                        <i class="fab fa-github text-2xl text-neon-purple group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm mt-2">GitHub</span>
+                    </a>
+                    
+                    <a href="https://0xdevair.medium.com" class="group flex flex-col items-center p-4 bg-lighter-navy/50 rounded-xl border border-gray-800 hover:border-cyber-blue/50 transition-all">
+                        <i class="fab fa-medium text-2xl text-cyber-blue group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm mt-2">Medium</span>
+                    </a>
+                    
+                    <a href="https://dune.com/devair_md" class="group flex flex-col items-center p-4 bg-lighter-navy/50 rounded-xl border border-gray-800 hover:border-neon-purple/50 transition-all">
+                        <i class="fas fa-chart-bar text-2xl text-neon-purple group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm mt-2">Dune</span>
+                    </a>
+                    
+                    <a href="https://coinmarketcap.com/community/profile/thenameisdevair" class="group flex flex-col items-center p-4 bg-lighter-navy/50 rounded-xl border border-gray-800 hover:border-cyber-blue/50 transition-all">
+                        <i class="fas fa-coins text-2xl text-cyber-blue group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm mt-2">CMC</span>
+                    </a>
+                    
+                    <a href="https://farcaster.xyz/devair-md" class="group flex flex-col items-center p-4 bg-lighter-navy/50 rounded-xl border border-gray-800 hover:border-neon-purple/50 transition-all">
+                        <i class="fas fa-broadcast-tower text-2xl text-neon-purple group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm mt-2">Farcaster</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-lighter-navy">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">Let's <span class="bg-gradient-cyber bg-clip-text text-transparent">Collaborate</span></h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Get In Touch</h3>
+                        <p class="text-text-secondary mb-8 leading-relaxed">
+                            Looking for Web3 analytics expertise, DeFi research, or collaboration on blockchain data projects? I'm always open to discussing interesting opportunities.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-cyber rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Email</div>
+                                    <div class="text-text-secondary">Available upon request</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-indigo rounded-full flex items-center justify-center">
+                                    <i class="fab fa-twitter text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Twitter DM</div>
+                                    <div class="text-text-secondary">@0xdevair</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-cyber rounded-full flex items-center justify-center">
+                                    <i class="fab fa-discord text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Discord</div>
+                                    <div class="text-text-secondary">Available on request</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div>
+                        <form class="space-y-6" data-implementation="Implement form submission logic">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-dark-navy border border-gray-800 rounded-lg focus:border-cyber-blue focus:outline-none transition-colors" placeholder="Your name" data-mock="true">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 bg-dark-navy border border-gray-800 rounded-lg focus:border-cyber-blue focus:outline-none transition-colors" placeholder="your@email.com" data-mock="true">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Project Type</label>
+                                <select class="w-full px-4 py-3 bg-dark-navy border border-gray-800 rounded-lg focus:border-cyber-blue focus:outline-none transition-colors" data-mock="true">
+                                    <option>Analytics & Research</option>
+                                    <option>DeFi Protocol Analysis</option>
+                                    <option>Dashboard Development</option>
+                                    <option>Sybil Detection</option>
+                                    <option>Content Creation</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-3 bg-dark-navy border border-gray-800 rounded-lg focus:border-cyber-blue focus:outline-none transition-colors resize-none" placeholder="Tell me about your project..." data-mock="true"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gradient-cyber py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transition-all">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-text-secondary mb-4 md:mb-0">
+                    © 2024 Devair (0xdevair). All rights reserved.
+                </div>
+                <div class="text-sm text-text-secondary">
+                    Building the future of Web3 analytics, one dashboard at a time.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Immediately Invoked Function Expression to scope variables
+        (function() {
+            // Rotating titles animation
+            const titles = [
+                'Web3 Analytics Expert',
+                'DeFi Research Specialist', 
+                'Sybil-Resistance Researcher',
+                'Blockchain Data Scientist',
+                'Dune Analytics Creator'
+            ];
+            
+            let currentTitle = 0;
+            const titleElement = document.getElementById('rotating-title');
+            
+            function rotateTitle() {
+                titleElement.style.opacity = '0';
+                setTimeout(() => {
+                    currentTitle = (currentTitle + 1) % titles.length;
+                    titleElement.textContent = titles[currentTitle];
+                    titleElement.style.opacity = '1';
+                }, 300);
+            }
+            
+            // Start rotation after initial delay
+            setTimeout(() => {
+                setInterval(rotateTitle, 3000);
+            }, 2000);
+            
+            // Counter animation
+            function animateCounter(element) {
+                const target = parseInt(element.getAttribute('data-counter'));
+                const duration = 2000;
+                const start = 0;
+                const increment = target / (duration / 16);
+                let current = start;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current).toLocaleString() + (target >= 1000 ? '+' : '');
+                }, 16);
+            }
+            
+            // Intersection Observer for counter animation
+            const counterElements = document.querySelectorAll('[data-counter]');
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            counterElements.forEach(el => counterObserver.observe(el));
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // TODO: Implement form submission logic
+            // TODO: Add mobile menu toggle functionality
+            // TODO: Implement project filtering and search
+            // TODO: Add contact form validation and submission
+        })();
+    </script>
+</body>
+</html>
